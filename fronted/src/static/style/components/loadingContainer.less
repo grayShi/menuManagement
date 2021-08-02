@@ -1,0 +1,39 @@
+@import '../params.less';
+
+.page-body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .body-container {
+    overflow: auto;
+    flex: 1;
+    .body-content {
+      height: 100%;
+    }
+
+    // .ant-back-top {
+    //   bottom: 5%;
+    //   right: 5%;
+    //   transition: transform 1s ease;
+    //   &:hover {
+    //     transform: scale(1.2);
+    //   }
+    //   .ant-back-top-content {
+    //     background-color: #409eff;
+    //   }
+    // }
+
+    & > .ant-spin-nested-loading {
+      height: 100%;
+      min-width: @page-width;
+      & > div > .ant-spin {
+        z-index: 1001;
+        max-height: none;
+      }
+      & > .ant-spin-container {
+        height: 100%;
+        min-width: @page-width;
+      }
+    }
+  }
+}
